@@ -1,15 +1,15 @@
-import URL from './config'
+// import URL from './config'
 import jsonP from 'jsonp'
 
 class Fetch{
 	
-	JsonP(data, option = {
+	JsonP(data, url, option = {
 		param: 'callback',
 		timeout: 10000,
 		prefix: '',
 		name: 'jsonp1'
 	}) {
-		let url = URL + this.param(data)
+		url = url + this.param(data)
 		
 		return new Promise((resolve, reject) => {
 			jsonP(url, option, function(err, data) {

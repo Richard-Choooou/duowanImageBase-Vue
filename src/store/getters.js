@@ -7,5 +7,11 @@ export default {
 	},
 	getPlayType(state) {
 		return state.playType
+	},
+	getPlayIndex(state) {
+		return state.playIndex
+	},
+	getPhotoAlbumID(state) {
+		return state.photoAlbumID
 	}
 }

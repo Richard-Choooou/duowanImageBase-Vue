@@ -70,7 +70,7 @@ export default {
 	},
 	beforeRouteLeave(to, from, next) {
 		if(this.$refs.comment.showComment) {
-			this.$refs.comment.showComment = false
+			this.$refs.comment.close()
 			next(false)
 			return
 		}

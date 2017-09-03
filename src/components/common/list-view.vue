@@ -39,7 +39,9 @@ export default {
 	},
 	methods: {
 		clickItem(id) {
-			this.$emit('clickItem', id)
+			this.$emit('clickItem', id) 	//暂时废弃
+			this.$store.commit('SET_PLAY_PHOTO_ALBUM_ID', id)
+
 			getImgList(id).then( data => {
 				this.$router.push(this.$route.matched[0].path + '/play')
 				// console.log(this.$store)

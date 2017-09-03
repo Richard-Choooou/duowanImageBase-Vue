@@ -12,5 +12,8 @@ export default {
 	},
 	[type.SET_PLAY_DATA](state, obj) {
 		state.playData = obj
+	},
+	[type.SET_PLAY_PHOTO_ALBUM_ID](state, number) {
+		state.photoAlbumID = number
 	}
 }
