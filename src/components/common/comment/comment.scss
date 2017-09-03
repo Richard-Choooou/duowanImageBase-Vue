@@ -1,0 +1,61 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: all .5s
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active in below version 2.1.8 */
+
+{
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+}
+
+#comment-container {
+	position: absolute;
+	top: pxToRem(174px);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #000;
+	background: #fff;
+
+
+	nav {
+		$border-color: rgba(0, 0, 0, 0.54);
+		$itemHeight: pxToRem(100px);
+
+		box-sizing: border-box;
+		display: table;
+		margin: 0 auto;
+		margin-top: pxToRem(30px);
+		height: $itemHeight;
+		text-align: center;
+		border: 1px solid $border-color;
+		border-radius: pxToRem(30px);
+		font-size: pxToRem(52px);
+		overflow: hidden;
+
+		span{
+			// box-sizing: border-box;
+			display: inline-block;
+			width: pxToRem(350px);
+			height: $itemHeight;
+			// border: 1px solid #000;
+			line-height: $itemHeight;
+
+			&:nth-of-type(2) {
+				border-left: 1px solid $border-color;
+				border-right: 1px solid $border-color; 
+			}
+		}
+
+		.checked {
+			background: #2D88D6;
+			color: #fff;
+		}
+
+		
+	}
+}

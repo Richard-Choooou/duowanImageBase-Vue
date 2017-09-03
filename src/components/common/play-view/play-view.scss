@@ -1,0 +1,144 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: all .7s
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active in below version 2.1.8 */
+
+{
+    transform: perspective(2000px) rotate3d(1, 0, 0, 90deg);
+    transform-style: preserve-3d;
+    opacity: 0;
+}
+
+.slideTop-enter-active,
+.slideTop-leave-active {
+    transition: all .7s
+}
+
+.slideTop-enter,
+.slideTop-leave-to
+/* .fade-leave-active in below version 2.1.8 */
+
+{
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+}
+
+.slideBottom-enter-active,
+.slideBottom-leave-active {
+    transition: all .7s
+}
+
+.slideBottom-enter,
+.slideBottom-leave-to
+/* .fade-leave-active in below version 2.1.8 */
+
+{
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+}
+
+
+.play-view {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: #000;
+	color: #fff;
+	touch-action: none;
+}
+
+header {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+	height: pxToRem(174px);
+	z-index: 100;
+	
+    #back {
+        height: pxToRem(85px);
+	}
+	
+    #title {
+		font-size: pxToRem(56px);
+		width: pxToRem(900px);
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+
+	#count {
+		font-size: pxToRem(78px);
+	}
+}
+
+#img-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	// img {
+	// 	width: 100%;
+	// }
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: pxToRem(500px);
+	background: rgba(0, 0, 0, .5);
+	#btn-container {
+		display: flex;
+		justify-content: space-around;
+		margin-top: pxToRem(20px);
+
+		>div {
+			display: inline-flex;
+			flex-direction: column;
+			// justify-content: center;
+			align-items: center;
+
+			span {
+				margin-top: pxToRem(10px);
+			}
+		}
+		img {
+			height: pxToRem(100px);
+			width: pxToRem(100px);
+		}
+		#oldPic {
+			display: block;
+			height: pxToRem(100px);
+			width: pxToRem(100px);
+			font-size: pxToRem(36px);
+			background: #fff;
+			color: #000;
+			text-align: center;
+			line-height: pxToRem(110px);
+			border-radius: 50%;
+		}
+
+		>*:active {
+			transform: scale(0.6);
+		}
+	}
+
+	#disc {
+		padding: {
+			left: pxToRem(20px);
+			right: pxToRem(20px);
+		}
+		height: pxToRem(350px);
+		overflow: scroll;
+		margin-top: pxToRem(30px);
+		// text-align: center;
+	}
+}

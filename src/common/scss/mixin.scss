@@ -1,0 +1,5 @@
+$blueLeft: rgb(123, 185, 234);
+$blueRight: rgb(0, 120, 215);
+@function pxToRem($px) {
+	@return $px/124.2px * 1rem
+}
